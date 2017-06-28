@@ -1,0 +1,45 @@
+C02RW2C0G8WL:class_008 eroberts$ irb
+2.3.0 :001 > load "shoes.rb"
+ => true 
+2.3.0 :002 > Person.new
+NameError: uninitialized constant Person
+	from (irb):2
+	from /Users/eroberts/.rvm/rubies/ruby-2.3.0/bin/irb:11:in `<main>'
+2.3.0 :003 > load "person.rb"
+ => true 
+2.3.0 :004 > Person.new
+ArgumentError: wrong number of arguments (given 0, expected 2)
+	from person.rb:3:in `initialize'
+	from (irb):4:in `new'
+	from (irb):4
+	from /Users/eroberts/.rvm/rubies/ruby-2.3.0/bin/irb:11:in `<main>'
+2.3.0 :005 > sneakers = Shoes.new("Converse", "Chucks", "black")
+ => #<Shoes:0x007feb6f150420 @brand="Converse", @name="Chucks", @color="black"> 
+2.3.0 :006 > pump = Shoes.new("Christian Louboutain", "High Heel", "red")
+ => #<Shoes:0x007feb7111b098 @brand="Christian Louboutain", @name="High Heel", @color="red"> 
+2.3.0 :007 > sandal = Shoes.new("Birkinstocks", "Jesus Sandals", "dirt brown")
+ => #<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="dirt brown"> 
+2.3.0 :008 > sandal.name="flat sandal"
+ => "flat sandal" 
+2.3.0 :009 > sandal.name="Jesus Sandals"
+ => "Jesus Sandals" 
+2.3.0 :010 > sandal
+ => #<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="dirt brown"> 
+2.3.0 :011 > sandal.color = "Bethlehem Brown"
+ => "Bethlehem Brown" 
+2.3.0 :012 > sandal
+ => #<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="Bethlehem Brown"> 
+2.3.0 :013 > shoe_stock = []
+ => [] 
+2.3.0 :014 > shoe_stock.push(sandal)
+ => [#<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="Bethlehem Brown">] 
+2.3.0 :015 > shoe_stock.push(pump)
+ => [#<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="Bethlehem Brown">, #<Shoes:0x007feb7111b098 @brand="Christian Louboutain", @name="High Heel", @color="red">] 
+2.3.0 :016 > shoe_stock.push(sneakers)
+ => [#<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="Bethlehem Brown">, #<Shoes:0x007feb7111b098 @brand="Christian Louboutain", @name="High Heel", @color="red">, #<Shoes:0x007feb6f150420 @brand="Converse", @name="Chucks", @color="black">] 
+2.3.0 :017 > shoe_stock
+ => [#<Shoes:0x007feb710f2288 @brand="Birkinstocks", @name="Jesus Sandals", @color="Bethlehem Brown">, #<Shoes:0x007feb7111b098 @brand="Christian Louboutain", @name="High Heel", @color="red">, #<Shoes:0x007feb6f150420 @brand="Converse", @name="Chucks", @color="black">] 
+2.3.0 :018 > shoe_stock.size
+ => 3 
+2.3.0 :019 > 
+
