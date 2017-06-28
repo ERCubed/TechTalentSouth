@@ -26,6 +26,3 @@ class Shoes
 
 end
 
-class Shoes::Sizes
-
-end
