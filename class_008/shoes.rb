@@ -24,5 +24,9 @@ class Shoes
 		@name = name
 	end
 
+	def resoled
+		false
+	end
+
 end
 
