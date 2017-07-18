@@ -1,7 +1,60 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# To reset the database run rails db:reset.
+# This is a convenience call for "rails db:drop db:create db:migrate db:seed"
+
+# Adding seed data for the states and capitals
+# Population based on 2017 data: http://worldpopulationreview.com/states/
+State.create([
+  { :name => 'Alabama', :capital => 'Montgomery', :population => 4884115},
+  { :name => 'Alaska', :capital => 'Juneau', :population => 741204},
+  { :name => 'Arizona', :capital => 'Phoenix', :population => 7026629},
+  { :name => 'Arkansas', :capital => 'Little Rock', :population => 3000942},
+  { :name => 'California', :capital => 'Sacramento', :population => 39849872},
+  { :name => 'Colorado', :capital => 'Denver', :population => 5658546},
+  { :name => 'Connecticut', :capital => 'Hartford', :population => 3583134},
+  { :name => 'Delaware', :capital => 'Dover', :population => 965866},
+  { :name => 'Florida', :capital => 'Tallahassee', :population => 	21002678},
+  { :name => 'Georgia', :capital => 'Atlanta', :population => 10450316},
+  { :name => 'Hawaii', :capital => 'Honolulu', :population => 1454295},
+  { :name => 'Idaho', :capital => 'Boise', :population => 1695178},
+  { :name => 'Illinois', :capital => 'Springfield', :population => 12815607},
+  { :name => 'Indiana', :capital => 'Indianapolis', :population => 6663280},
+  { :name => 'Iowa', :capital => 'Des Moines', :population => 3152735},
+  { :name => 'Kansas', :capital => 'Topeka', :population => 2929909},
+  { :name => 'Kentucky', :capital => 'Frankfort', :population => 4450042},
+  { :name => 'Louisiana', :capital => 'Baton Rouge', :population => 4714192},
+  { :name => 'Maine', :capital => 'Augusta', :population => 1327472},
+  { :name => 'Maryland', :capital => 'Annapolis', :population => 6068511},
+  { :name => 'Massachusetts', :capital => 'Boston', :population => 6873018},
+  { :name => 'Michigan', :capital => 'Lansing', :population => 	9935116},
+  { :name => 'Minnesota', :capital => 'Saint Paul', :population => 5554532},
+  { :name => 'Mississippi', :capital => 'Jackson', :population => 2990113},
+  { :name => 'Missouri', :capital => 'Jefferson City', :population => 6123362},
+  { :name => 'Montana', :capital => 'Helena', :population => 1052343},
+  { :name => 'Nebraska', :capital => 'Lincoln', :population => 1922610},
+  { :name => 'Nevada', :capital => 'Carson City', :population => 2995973},
+  { :name => 'New Hampshire', :capital => 'Concord', :population => 1335832},
+  { :name => 'New Jersey', :capital => 'Trenton', :population => 8996351},
+  { :name => 'New Mexico', :capital => 'Santa Fe', :population => 2084193},
+  { :name => 'New York', :capital => 'Albany', :population => 19889657},
+  { :name => 'North Carolina', :capital => 'Raleigh', :population => 10247632},
+  { :name => 'North Dakota', :capital => 'Bismarck', :population => 790701},
+  { :name => 'Ohio', :capital => 'Columbus', :population => 11646273},
+  { :name => 'Oklahoma', :capital => 'Oklahoma City', :population => 3974794},
+  { :name => 'Oregon', :capital => 'Salem', :population => 4144527},
+  { :name => 'Pennsylvania', :capital => 'Harrisburg', :population => 12819975},
+  { :name => 'Rhode Island', :capital => 'Providence', :population => 1059080},
+  { :name => 'South Carolina', :capital => 'Columbia', :population => 5030118},
+  { :name => 'South Dakota', :capital => 'Pierre', :population => 868799},
+  { :name => 'Tennessee', :capital => 'Nashville', :population => 6705339},
+  { :name => 'Texas', :capital => 'Austin', :population => 28449186},
+  { :name => 'Utah', :capital => 'Salt Lake City', :population => 3098761},
+  { :name => 'Vermont', :capital => 'Montpelier', :population => 624592},
+  { :name => 'Virginia', :capital => 'Richmond', :population => 8492783},
+  { :name => 'Washington', :capital => 'Olympia', :population => 7384721},
+  { :name => 'West Virginia', :capital => 'Charleston', :population => 1834882},
+  { :name => 'Wisconsin', :capital => 'Madison', :population => 5795147},
+  { :name => 'Wyoming', :capital => 'Cheyenne', :population => 589713}
+])
