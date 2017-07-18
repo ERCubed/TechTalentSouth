@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Capital</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @states.each do |state| %>
+      <tr>
+        <td><%= state.id %></td>
+        <td><%= state.name %></td>
+        <td><%= state.capital %></td>
+        <td><%= number_with_delimiter(state.population, :delimiter => ',') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

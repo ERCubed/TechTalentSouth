@@ -1,0 +1,14 @@
+require 'test_helper'
+
+class CountryControllerTest < ActionDispatch::IntegrationTest
+  test "should get all_states" do
+    get country_all_states_url
+    assert_response :success
+  end
+
+  test "should get top_five_population" do
+    get country_top_five_population_url
+    assert_response :success
+  end
+
+end

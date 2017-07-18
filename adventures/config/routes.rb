@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'country'	=> 'country#index'  
+  get 'country/all_states'
+  get 'country/top_five_population'
+
   root 'welcome#index'
   get 'contact' => 'welcome#contact'
 
