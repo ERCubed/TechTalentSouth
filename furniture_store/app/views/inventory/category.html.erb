@@ -1,17 +1,24 @@
-<h1>Inventory#category</h1>
+<h1>Inventory for Category <%= @category_name %></h1>
 
+<% if @products.size > 0 %>
 
-<table border="1">
-<tr>
-	<th>Name</th>
-	<th>Price</th>
-	<th>Category</th>
-</tr>
-<% @products.each do |p| %>
+	<table border="1">
 	<tr>
-		<td><%= p.name %></td>
-		<td>$<%= '%.2f' % p.price %></td>
-		<td><%= p.category %></td>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Category</th>
 	</tr>
+	<% @products.each do |p| %>
+		<tr>
+			<td><%= p.name %></td>
+			<td>$<%= '%.2f' % p.price %></td>
+			<td><%= p.category %></td>
+		</tr>
+	<% end %>
+	</table>
+
+<% else %>
+	
+	<p>We're sorry, but we currently have no inventory in our <%= @category_name %> department</p>
+
 <% end %>
-</table>

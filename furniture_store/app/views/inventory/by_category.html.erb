@@ -1,13 +1,14 @@
-<h1>Inventory#by_category</h1>
+<h1>Inventory Categories</h1>
 
 <table border="1">
 <tr>
 	<th>Category</th>
+	<th>Dynamic Link</th>
 </tr>
 <% @categories.each do |c| %>
 	<tr>
-		<td><a href="/inventory/category/<%= c.category %>"><%= c.category %></a>
-		<%#= link_to c.category, inventory_category_path(params: c.category) %></td>
+		<td><%= link_to c.category, category_list_path(c.category) %></td>
+		<td>"/inventory/category/<%= c.category %>"</td>
 	</tr>
 <% end %>
 </table>

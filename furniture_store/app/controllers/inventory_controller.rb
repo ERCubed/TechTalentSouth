@@ -7,12 +7,12 @@ class InventoryController < ApplicationController
   end
 
   def by_category
-  	# @products = Product.where(category: 'chair')
   	@categories = Product.select(:category).distinct
   end
 
   def category
-  	@products = Product.where(category: params[:name])
+  	@category_name = params[:name]
+    @products = Product.where(category: @category_name)
   end
 
 end
