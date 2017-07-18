@@ -1,0 +1,17 @@
+<h1>Inventory#category</h1>
+
+
+<table border="1">
+<tr>
+	<th>Name</th>
+	<th>Price</th>
+	<th>Category</th>
+</tr>
+<% @products.each do |p| %>
+	<tr>
+		<td><%= p.name %></td>
+		<td>$<%= '%.2f' % p.price %></td>
+		<td><%= p.category %></td>
+	</tr>
+<% end %>
+</table>
