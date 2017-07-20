@@ -2,6 +2,7 @@ class EpicenterController < ApplicationController
   def feed
   	@following_tweets = []
 
+    # Add tweets and follows if the current user is set.
     if current_user
       Tweet.all.each do |tweet|
         if current_user.following.include?(tweet.user_id) || current_user.id == tweet.user_id
