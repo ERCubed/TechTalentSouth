@@ -1,20 +1,36 @@
-<% if current_user %>
-	<h1>@<%= current_user.username %>'s Twitter Feed</h1>
-	<p>Here is what your "friends" are saying:</p>
+<div class="row">
+	<div class="col-md-3">
+		Left sidebar stuff
+	</div>
+	<div class="col-md-6">
+	<% if current_user %>
+		<h1>@<%= current_user.username %>'s Twitter Feed</h1>
+		<p>Here is what your "friends" are saying:</p>
 
-	<div>
-	    <% @following_tweets.each do |tweet| %>
-	        <div>
-		    <p>@<%= tweet.user.username %></p>
-		    <p><%= tweet.message.html_safe %></p>
+		<div>
+		    <% @following_tweets.each do |tweet| %>
+		        <div>
+			    <p>@<%= tweet.user.username %></p>
+			    <p><%= tweet.message.html_safe %></p>
+			</div>
+		    <% end %>
 		</div>
-	    <% end %>
+
+	<% else %>
+
+		<div class="jumbotron">
+			<h3>Why don't you log in or sign up to see some content?</h3>
+		</div>
+
+	<% end %>
 	</div>
+	<div class="col-md-3">
+		
+		<div class="right-side-box">
+			<div class="content">
+				Right sidebar
+			</div>
+		</div>
 
-<% else %>
-
-	<div class="jumbotron">
-		<h3>Why don't you log in or sign up to see some content?</h3>
 	</div>
-
-<% end %>
+</div>

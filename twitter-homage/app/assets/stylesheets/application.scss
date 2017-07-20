@@ -1,3 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.right-side-box {
+	background-color: #D1D0CE;	// Color: Grey Goose
+	min-height: 150px;
+	border-radius: 25px;
+}
+
+.content {
+	padding: 15px;
+}
