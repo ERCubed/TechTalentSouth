@@ -38,6 +38,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
