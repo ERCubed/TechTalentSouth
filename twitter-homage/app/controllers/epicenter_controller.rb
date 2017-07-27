@@ -9,11 +9,71 @@ class EpicenterController < ApplicationController
           @following_tweets.push(tweet)
         end
       end
+      @following_tweets.reverse!
     end
   end
 
   def show_user
   	@user = User.find(params[:id])
+    @following = []
+    @followers = []
+
+    User.all.each do |user|
+      if @user.following.include?(user.id)
+        @following.push(user)
+      end
+    end
+
+    User.all.each do |user|
+      if user.following.include?(@user.id)
+        @followers.push(user)
+      end
+    end
+  end
+
+  def all_users
+    @users = User.order(:name)
+  end
+
+  def following
+    @user = User.find(params[:id])
+    @users = []
+
+    User.all.each do |user|
+      if @user.following.include?(user.id)
+        @users.push(user)
+      end
+    end
+  end
+
+  def followers
+    @user =  User.find(params[:id])
+    @users = []
+
+    User.all.each do |user|
+      if user.following.include?(@user.id)
+        @users.push(user)
+      end
+    end
+  end 
+
+  def stats
+    @user = current_user
+    @following = []
+    @followers = []
+
+    User.all.each do |user|
+      if @user.following.include?(user.id)
+        @following.push(user)
+      end
+    end
+
+    User.all.each do |user|
+      if user.following.include?(@user.id)
+        @followers.push(user)
+      end
+    end
+
   end
 
   def now_following
@@ -32,4 +92,9 @@ class EpicenterController < ApplicationController
 
 	  redirect_to show_user_path(id: params[:id]) 
   end
+
+  def tag_tweets
+    @tag = Tag.find(params[:id])
+  end
+
 end
